@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jess' Cleaning Services</title>
+  <style>
+    /* Simple, basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      color: #222;
+      background: #ffffff;
+    }
+
+    /* Navigation menu */
+    nav {
+      background: #006666;
+      padding: 12px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header / Hero */
+    header {
+      background: #e0f2f2;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      color: #006666;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    /* Sections */
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #006666;
+      margin-top: 0;
+      border-bottom: 2px solid #006666;
+      padding-bottom: 5px;
+    }
+
+    /* Services and Gallery grids — 4 squares each */
+    .grid-4 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .grid-4 > div {
+      background: #f2fafa;
+      border: 1px solid #cccccc;
+      padding: 15px;
+      width: 180px;
+      border-radius: 5px;
+    }
+
+    .grid-4 h3 {
+      margin: 0 0 5px;
+      font-size: 1rem;
+      color: #006666;
+    }
+
+    .grid-4 p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    /* Gallery squares with images */
+    .gallery-item {
+      width: 180px;
+      height: 140px;
+      border: 1px solid #aaaaaa;
+      border-radius: 5px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      background: #ffffff;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-item span {
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 4px;
+      background: #f2fafa;
+      color: #333;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Video */
+    video {
+      display: block;
+      margin: 20px auto;
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      background: #000;
+      border-radius: 5px;
+    }
+
+    /* Contact form */
+    form {
+      max-width: 500px;
+      margin: 20px auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border: 1px solid #999999;
+      border-radius: 4px;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 80px;
+    }
+
+    button {
+      margin-top: 15px;
+      background: #006666;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #004d4d;
+    }
+
+    /* Footer */
+    footer {
+      background: #006666;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Offset for sticky nav */
+    section {
+      scroll-margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation menu with bookmarks -->
+  <nav>
+    <a href="#overview">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#video">Video</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Jess' Cleaning Services</h1>
+    <p>Fast, reliable residential cleaning — only homes, always on time.</p>
+  </header>
+
+  <!-- Overview / Services section -->
+  <section id="overview">
+    <h2>Our Services</h2>
+    <p>We clean homes only, and we do it fast. Here's what we offer:</p>
+
+    <div class="grid-4">
+      <div>
+        <h3>Kitchen Cleaning</h3>
+        <p>Counters, sink, appliances wiped down.</p>
+      </div>
+      <div>
+        <h3>Bathroom Cleaning</h3>
+        <p>Toilets, showers, sinks, mirrors.</p>
+      </div>
+      <div>
+        <h3>Living Areas</h3>
+        <p>Dusting, vacuuming, tidying up.</p>
+      </div>
+      <div>
+        <h3>Express Service</h3>
+        <p>Same-day and next-day slots available.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery section -->
+  <section id="gallery" style="background:#f9f9f9;">
+    <h2>Gallery</h2>
+    <p>Some examples of our cleaning work:</p>
+
+    <div class="grid-4">
+      <div class="gallery-item">
+        <img src="Clean Kitchen.jpg" alt="Clean Kitchen">
+        <span>Clean Kitchen</span>
+      </div>
+      <div class="gallery-item">
+        <img src="Spotless Bathroom.jpg" alt="Spotless Bathroom">
+        <span>Spotless Bathroom</span>
+      </div>
+      <div class="gallery-item">
+        <img src="Tidy Living Room.jpg" alt="Tidy Living Room">
+        <span>Tidy Living Room</span>
+      </div>
+      <div class="gallery-item">
+        <img src="Fresh Bedroom.jpg" alt="Fresh Bedroom">
+        <span>Fresh Bedroom</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video section -->
+  <section id="video">
+    <h2>Our Video</h2>
+    <p>Watch a quick look at how we clean:</p>
+
+    <video controls>
+      <source src="cleaning website video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Contact form section -->
+  <section id="contact" style="background:#f9f9f9;">
+    <h2>Contact Us</h2>
+    <p>Send us a message and we'll reply fast.</p>
+
+    <form action="#" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone (optional)</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="service">Service Type</label>
+      <select id="service" name="service">
+        <option>Express Clean</option>
+        <option>Standard Clean</option>
+        <option>Deep Clean</option>
+        <option>Recurring Clean</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Tell us about your home..."></textarea>
+
+      <button type="submit">Send Inquiry</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Jess' Cleaning Services</strong></p>
+    <p>Phone: (555) 123-4567 | Email: hello@jesscleaning.com</p>
+    <p>Mon–Fri: 7am–7pm | Sat: 8am–4pm | Sun: Closed</p>
+    <p>© 2026 Jess' Cleaning Services. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
