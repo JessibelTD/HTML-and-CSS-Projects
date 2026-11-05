@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creating Effects with CSS</title>
+
+  <!-- Custom web fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link" href="#home">Home</a>
+      <div class="nav-dropdown">
+        <a class="nav-link" href="#images">Images</a>
+        <div class="dropdown-menu-custom">
+          <a href="#image1">Image 1</a>
+          <a href="#image2">Image 2</a>
+          <a href="#image3">Image 3</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="intro page-width">
+      <p class="eyebrow">A CSS practice project</p>
+      <h1>Creating Effects with CSS</h1>
+      <p class="intro-copy">A small collection of scenic images with simple hover effects.</p>
+    </section>
+
+    <section class="image-gallery page-width" id="images" aria-label="Image gallery">
+      <figure class="gallery-item" id="image1">
+        <div class="image-frame">
+          <img src="images/image-1.jpg" alt="A red Japanese torii gate standing in calm turquoise water">
+          <div class="image-overlay"><span>Image 1</span></div>
+        </div>
+        <figcaption>Peaceful waters</figcaption>
+      </figure>
+
+      <figure class="gallery-item" id="image2">
+        <div class="image-frame">
+          <img src="images/image-2.jpg" alt="Mount Fuji and a traditional Japanese pagoda framed by tree branches">
+          <div class="image-overlay"><span>Image 2</span></div>
+        </div>
+        <figcaption>Mount Fuji</figcaption>
+      </figure>
+
+      <figure class="gallery-item" id="image3">
+        <div class="image-frame">
+          <img src="images/image-3.jpg" alt="A golden Japanese temple beside a reflective pond">
+          <div class="image-overlay"><span>Image 3</span></div>
+        </div>
+        <figcaption>Golden pavilion</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>The Tech Academy &copy;</p>
+  </footer>
+</body>
+</html>

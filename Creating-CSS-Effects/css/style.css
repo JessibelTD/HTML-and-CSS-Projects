@@ -1,0 +1,200 @@
+/* General page styles - plain HTML and CSS; no Bootstrap required. */
+:root {
+  --nav-colour: #333333;
+  --accent-colour: #d99b18;
+  --text-colour: #292929;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--text-colour);
+  background: #ffffff;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Navigation bar and image dropdown */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--nav-colour);
+}
+
+.main-nav {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 46px;
+  padding: 0 max(5%, calc((100% - 1120px) / 2));
+}
+
+.nav-link {
+  display: block;
+  padding: 30px 0;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color .2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible { color: var(--accent-colour); }
+
+.nav-dropdown { position: relative; }
+
+.dropdown-menu-custom {
+  position: absolute;
+  top: 100%;
+  left: -14px;
+  display: none;
+  min-width: 145px;
+  padding: 7px 0;
+  background: #ffffff;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, .16);
+}
+
+.dropdown-menu-custom a {
+  display: block;
+  padding: 11px 15px;
+  color: #333333;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.dropdown-menu-custom a:hover,
+.dropdown-menu-custom a:focus-visible {
+  color: #ffffff;
+  background: var(--accent-colour);
+}
+
+.nav-dropdown:hover .dropdown-menu-custom,
+.nav-dropdown:focus-within .dropdown-menu-custom { display: block; }
+
+/* Shared content width and heading typography. */
+.page-width {
+  width: min(90%, 1120px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro {
+  text-align: center; padding-top: 58px; padding-bottom: 28px; }
+
+.eyebrow {
+  margin-bottom: 10px;
+  color: #9a741f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 600;
+}
+
+.intro-copy {
+  margin: 13px 0 0;
+  color: #686868;
+  font-size: 14px;
+}
+
+/* Images are kept centered and stacked, as in the tutorial. */
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+.gallery-item {
+  width: min(100%, 680px);
+  margin: 0;
+  text-align: center;
+  scroll-margin-top: 105px;
+}
+
+.image-frame {
+  position: relative;
+  overflow: hidden;
+  background: #eeeeee;
+}
+
+.image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform .45s ease, filter .45s ease;
+}
+
+/* Gentle hover effect: a small zoom and slight brightness adjustment. */
+.image-frame:hover img {
+  transform: scale(1.035);
+  filter: brightness(.88) saturate(1.08);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(25, 25, 25, .22);
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.image-overlay span {
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, .9);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.image-frame:hover .image-overlay { opacity: 1; }
+
+.gallery-item figcaption {
+  padding-top: 12px;
+  color: #666666;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px;
+}
+
+.site-footer {
+  padding: 22px 15px;
+  color: #eeeeee;
+  background: var(--nav-colour);
+  text-align: center;
+}
+
+.site-footer p { margin: 0; font-size: 12px; }
+
+@media (max-width: 575px) {
+  .main-nav { min-height: 68px; gap: 28px; padding: 0 22px; }
+  .nav-link { padding: 24px 0; font-size: 13px; }
+  .intro { padding-top: 42px; }
+  .image-gallery { gap: 38px; padding-bottom: 48px; }
+}
+
+/* Respect visitors who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
