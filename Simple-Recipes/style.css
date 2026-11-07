@@ -1,0 +1,378 @@
+/* GENERAL STYLES */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    margin: 0;
+    color: #292929;
+    background-color: #ffffff;
+    font-family: "Open Sans", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .brand {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-weight: 400;
+}
+
+h2 {
+    margin: 0 0 22px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.section-wrap {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+/* NAVIGATION */
+.navbar {
+    min-height: 54px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #078f70;
+}
+
+.brand {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.35rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    display: block;
+    padding: 16px 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #d5fff2;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -14px;
+    z-index: 5;
+    min-width: 155px;
+    padding: 6px 14px;
+    background-color: #078f70;
+    list-style: none;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    padding: 8px 0;
+}
+
+/* FEATURED RECIPE */
+.featured {
+    padding: 38px 0 48px;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section-heading h1 {
+    margin: 0;
+    font-size: 2.35rem;
+}
+
+.section-heading p {
+    margin: 3px 0 0;
+    color: #777777;
+}
+
+.featured > h2 {
+    text-align: left;
+    margin-bottom: 14px;
+}
+
+.featured-card {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    overflow: hidden;
+    background-color: #e4faf3;
+}
+
+.featured-card img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+.featured-copy {
+    align-self: center;
+    padding: 30px;
+}
+
+.featured-copy h3 {
+    margin: 0 0 12px;
+    font-size: 1.7rem;
+}
+
+.recipe-details {
+    color: #666666;
+    font-size: 0.88rem;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #078f70;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+/* RECIPE CARDS */
+.recipe-section {
+    padding: 30px 0 65px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.recipe-card {
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    background-color: #ffffff;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.10);
+}
+
+.recipe-card img {
+    display: block;
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+}
+
+.recipe-copy {
+    padding: 17px 19px 20px;
+}
+
+.recipe-copy h3 {
+    margin: 0 0 8px;
+    font-size: 1.25rem;
+}
+
+.recipe-copy p {
+    margin: 0 0 10px;
+    font-size: 0.92rem;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: 58px 0;
+    border-top: 1px solid #e8eeeB;
+    border-bottom: 1px solid #e8eeeb;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    margin-bottom: 18px;
+}
+
+.about-content p {
+    margin: 0;
+    color: #555555;
+    text-align: center;
+    line-height: 1.9;
+}
+
+/* CONTACT FORM */
+.contact-section {
+    padding: 60px 0 70px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 8px;
+}
+
+.contact-intro {
+    margin: 0 0 25px;
+    color: #666666;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    width: min(440px, 100%);
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: #292929;
+    font: inherit;
+    font-size: 0.9rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid rgba(7, 143, 112, 0.2);
+    border-color: #078f70;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    align-self: center;
+    min-width: 105px;
+    padding: 10px 22px;
+    border: 0;
+    border-radius: 20px;
+    background-color: #078f70;
+    color: #ffffff;
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #066f58;
+}
+
+/* FOOTER */
+.site-footer {
+    padding: 32px 5% 18px;
+    background-color: #078f70;
+    color: #ffffff;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 35px;
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+.footer-inner h2 {
+    margin: 0;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.footer-inner p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    padding-top: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+/* SMALL SCREENS */
+@media (max-width: 760px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0 20px;
+    }
+
+    .nav-links a {
+        padding: 8px 0;
+    }
+
+    .featured-card {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-card img {
+        height: 260px;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .section-heading h1 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        text-align: left;
+    }
+}
